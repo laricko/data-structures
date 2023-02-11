@@ -15,12 +15,18 @@ class LinkedList:
         return str(self.to_list())
 
     def add_value(self, value: Any) -> None:
+        """
+        Add Node in the end of linked list
+        """
         cur = self.head
         while cur.next:
             cur = cur.next
         cur.next = Node(value)
 
     def search_value(self, value: Any) -> int | None:
+        """
+        Return index of value
+        """
         cur = self.head
         index = 0
         while True:
@@ -82,6 +88,9 @@ class LinkedList:
                 cur = cur.next
 
     def buble_sort(self) -> None:
+        """
+        Do not use on production. The worstest sort
+        """
         if self.head is None:
             return
         end = None
